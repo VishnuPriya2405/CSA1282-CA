@@ -1,0 +1,14 @@
+def calculate_hit_ratio(hits, misses):
+    total_accesses = hits + misses
+    hit_ratio = hits / total_accesses
+    return hit_ratio
+
+# Given data
+hits = 24
+misses = 5
+
+# Calculate hit ratio
+hit_ratio = calculate_hit_ratio(hits, misses)
+
+# Print the result
+print(f"Hit Ratio: {hit_ratio:.2f}")
