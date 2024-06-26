@@ -1,0 +1,36 @@
+#include <stdio.h>
+void fetch() 
+{
+    printf("Fetch stage complete.\n");
+}
+void decode() 
+{
+    printf("Decode stage complete.\n");
+}
+int execute(int A, int B) 
+{
+    int result = A * B;
+    printf("Execute stage complete.\n");
+    return result;
+}
+void writeback(int result) 
+{
+    printf("Writeback stage complete.\n");
+    printf("Result: %d\n", result);
+}
+
+int main() 
+{
+    int clock_cycles = 0;
+    int A = 12; 
+    int B = 4; 
+    int result; 
+    fetch();
+    decode();
+    result = execute(A, B);
+    clock_cycles += 3; 
+    writeback(result);
+    clock_cycles++; 
+    printf("Total clock cycles required: %d\n", clock_cycles);
+    return 0;
+}
